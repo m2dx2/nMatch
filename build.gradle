@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    maven {	url "http://nexus.turtlemint.com/repository/maven-public/"
+        allowInsecureProtocol = true}
+}
+
+dependencies {}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'service.WildcardLibrary'
+    }
+}
